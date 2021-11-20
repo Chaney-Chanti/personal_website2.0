@@ -20,11 +20,11 @@ import sanfrancisco from "../images/sanfrancisco.webp";
 import beijing from "../images/beijing.webp";
 
 const cities = [
-  { name: "Dallas", image: dallas },
-  { name: "Austin", image: austin },
-  { name: "New York", image: newyork },
-  { name: "San Francisco", image: sanfrancisco },
-  { name: "Beijing", image: beijing }
+  { name: "Nature", image: dallas },
+  { name: "Tennis", image: austin },
+  { name: "Gaming", image: newyork },
+  { name: "Friends", image: sanfrancisco },
+  { name: "Travel", image: beijing }
 ];
 
 const Hamburger = ({ state }) => {
@@ -83,7 +83,7 @@ const Hamburger = ({ state }) => {
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line1 = el)}
-                      to='/opportunities'>
+                      to='/Projects'>
                       Projects
                     </Link>
                   </li>
@@ -92,7 +92,7 @@ const Hamburger = ({ state }) => {
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line2 = el)}
-                      to='/solutions'>
+                      to='/Experience'>
                       Experience
                     </Link>
                   </li>
@@ -101,7 +101,7 @@ const Hamburger = ({ state }) => {
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line3 = el)}
-                      to='/contact-us'>
+                      to='/Contact'>
                       Contact Me
                     </Link>
                   </li>
@@ -111,14 +111,14 @@ const Hamburger = ({ state }) => {
                 <h3>About Me!</h3>
                 <p>
                   I am a senior at California State University, Fullerton 
-                  pursueing a bachelors in computer science. I am currently working
+                  pursuing a bachelors in computer science. I am currently working
                   as automation engineer intern at Teradek in Irvine, California. 
 
                   You can usually find me playing tennis, coding, or playing video games.
                 </p>
               </div>
               <div className='locations'>
-                Locations:
+                Gallery:
                 {/* Returning the list of cities */}
                 {cities.map(el => (
                   <span
