@@ -1,23 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.scss";
-
-import { library } from "@fortawesome/fontawesome-svg-core";
 import {
-  fab,
   faYoutubeSquare,
   faInstagramSquare,
   faGithubSquare,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { faCheckSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AOS from 'aos';
 
 import Header from "./components/Header";
-import "./styles/experience.css";
 import "./styles/home.css";
 import pdf from "./assets/resume.pdf";
+import ExperienceCard from "./components/ExperienceCard";
+import amazon_logo from "./assets/amazon_logo.jpg";
+import teradek_logo from "./assets/teradek_logo.jpg";
+
+
+
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+
 
 function App() {
   return (
@@ -46,11 +50,39 @@ function Projects() {
 }
 
 function Experience() {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <div className="xp-container">
+    <div className="experiencecard-container">
       <h1 className="xp-header">Experience</h1>
-      <div className="xp-first">
-        <h2>Teradek</h2>
+      <div data-aos="zoom-in-left">
+          <ExperienceCard className="experiencecard"
+              imgLink={amazon_logo}
+              title="Amazon"
+              role="Incoming SDE Intern"
+              date="Summer 2022">
+              <p className="body-text">
+                More to come!
+              </p>
+          </ExperienceCard>
+      </div>
+      <div data-aos="zoom-in-right">
+          <ExperienceCard className="experiencecard"
+              imgLink={teradek_logo}
+              title="Teradek"
+              role="Firmware Engineer Intern"
+              date="July 2021 - Current">
+              <p className="body-text">
+                  What began as a short four week internship and now a part-time job, I began the internship
+                  developing automation scripts in python to perform quality assurance tests on Teradek devices 
+                  to reduce manual testing labor. Using FFMPEG and VMAF for video analysis, the MQTT protocol for 
+                  messaging, and a statistical dashboard to display device testing errors, I learned a great deal 
+                  about encoders, decoders, the asynchronous pub/sub communication, and HTML/CSS/Javascript.
+              </p>
+          </ExperienceCard>
       </div>
     </div>
   );

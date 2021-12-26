@@ -112,7 +112,7 @@ const Hamburger = ({ state }) => {
                 <p>
                   I am a senior at California State University, Fullerton 
                   pursuing a bachelors in computer science. I am currently working
-                  as automation engineer intern at Teradek in Irvine, California. 
+                  as a firmware engineer intern at Teradek in Irvine, California. 
 
                   You can usually find me playing tennis, coding, or playing video games.
                 </p>
