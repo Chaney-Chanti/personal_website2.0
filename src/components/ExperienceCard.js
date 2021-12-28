@@ -39,6 +39,9 @@ export default (props) => {
                     font-family:'poppins';
                     font-weight: 400;
                     color: black;
+                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+                    background-color: white;
+                    border-radius: 1rem;
                 }
                 .company-logo-container {
                     margin: auto;

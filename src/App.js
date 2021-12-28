@@ -11,10 +11,12 @@ import AOS from 'aos';
 
 import Header from "./components/Header";
 import "./styles/home.css";
+import "./styles/contact.css"
 import pdf from "./assets/resume.pdf";
 import ExperienceCard from "./components/ExperienceCard";
 import amazon_logo from "./assets/amazon_logo.jpg";
 import teradek_logo from "./assets/teradek_logo.jpg";
+import emailjs from 'emailjs-com';
 
 
 
@@ -89,7 +91,32 @@ function Experience() {
 }
 
 function Contact() {
-  return <p>Feel free to contact me!</p>;
+
+  function sendEmail (e) {
+    e.preventDefault();
+    
+    emailjs.sendForm('personal_website', 'template_tir7z7i', e.target, 'user_oyQRSgwxVM5RvPZauCMhm')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset()
+  };
+  return (
+    <div className="contact-container">
+      <h1 className="contact-header">Feel Free To Contact Me!</h1>
+      <form className="form-handler" onSubmit={sendEmail}>
+          <label className="label-text">Name</label>
+          <input className="inputfield-sm" type="text" name="from_name" placeholder="Name"/>
+          <label className="label-text">Email</label>
+          <input className="inputfield-sm" type="text" name="from_email" placeholder = "Email"/>
+          <label className="label-text">Message</label>
+          <textarea className="inputfield-lg" name="message" placeholder="Message..." />
+          <input className="send-btn" type="submit" value="Send" />
+      </form>
+    </div>
+  )
 }
 
 function Home() {
