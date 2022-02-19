@@ -48,7 +48,47 @@ function App() {
 }
 
 function Projects() {
-  return <p>Personal Projects</p>;
+   
+  return (
+    <div className="experiencecard-container">
+      <h1 className="xp-header">Personal Projects</h1>
+      <div data-aos="zoom-in-left">
+          <ExperienceCard className="experiencecard"
+              title="Personal Portfolio"
+              date="Winter 2021">
+              <p className="body-text">
+                My personal portfolio showcasing my projects and experience.
+              </p>
+          </ExperienceCard>
+      </div>
+      <div data-aos="zoom-in-right">
+          <ExperienceCard className="experiencecard"
+              title="Study.us"
+              role="SDHacks 2021"
+              date="March 2021">
+              <p className="body-text">
+                  A Mern Stack project aimed at collecting student data such as test scores and homework
+                  to then caculate topics students struggle most with. The portal then recommends youtube 
+                  videos to the student based on the topics they struggle with.
+
+                  Wolfram Alpha Winner!
+              </p>
+          </ExperienceCard>
+      </div>
+      <div data-aos="zoom-in-right">
+          <ExperienceCard className="experiencecard"
+              title="Rotten Potatoes"
+              role="CPSC 349"
+              date="November 2021">
+              <p className="body-text">
+                  Fullstack project based on the popualr movie rating website Rotten Potatoes. 
+                  Uses MERN stack and the MovieDB.
+              </p>
+          </ExperienceCard>
+      </div>
+    </div>
+  );
+  
 }
 
 function Experience() {
@@ -65,7 +105,7 @@ function Experience() {
               imgLink={amazon_logo}
               title="Amazon"
               role="Incoming SDE Intern"
-              date="Summer 2022">
+              date="May 2022 - Current">
               <p className="body-text">
                 More to come!
               </p>
@@ -75,14 +115,14 @@ function Experience() {
           <ExperienceCard className="experiencecard"
               imgLink={teradek_logo}
               title="Teradek"
-              role="Firmware Engineer Intern"
-              date="July 2021 - Current">
+              role="Test Automation Intern"
+              date="July 2021 - May 2022">
               <p className="body-text">
                   What began as a short four week internship and now a part-time job, I began the internship
                   developing automation scripts in python to perform quality assurance tests on Teradek devices 
                   to reduce manual testing labor. Using FFMPEG and VMAF for video analysis, the MQTT protocol for 
-                  messaging, and a statistical dashboard to display device testing errors, I learned a great deal 
-                  about encoders, decoders, the asynchronous pub/sub communication, and HTML/CSS/Javascript.
+                  messaging, and a fullstack statistical dashboard to display device testing errors, I learned a 
+                  great deal about encoders, decoders, the asynchronous pub/sub communication, and HTML/CSS/Javascript.
               </p>
           </ExperienceCard>
       </div>
