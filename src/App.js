@@ -16,6 +16,10 @@ import pdf from "./assets/resume.pdf";
 import ExperienceCard from "./components/ExperienceCard";
 import amazon_logo from "./assets/amazon_logo.jpg";
 import teradek_logo from "./assets/teradek_logo.jpg";
+import rotpot_logo from "./assets/rotpot_logo.jpg";
+import greenhaus_logo from "./assets/greenhaus_logo.jpg";
+import studyus_logo from "./assets/studyus_logo.jpg";
+
 import emailjs from 'emailjs-com';
 
 
@@ -54,36 +58,53 @@ function Projects() {
       <h1 className="xp-header">Personal Projects</h1>
       <div data-aos="zoom-in-left">
           <ExperienceCard className="experiencecard"
-              title="Personal Portfolio"
-              date="Winter 2021">
+            imgLink={amazon_logo}
+            title="Personal Portfolio"
+            role="Personal Project"
+            date="Winter 2021">
+            <p className="body-text">
+              My personal portfolio built with React showcasing my projects and experience.
+            </p>
+          </ExperienceCard>
+      </div>
+      <div data-aos="zoom-in-right">
+          <ExperienceCard className="experiencecard"
+              imgLink={amazon_logo}
+              title="Twitter Backend Clone"
+              role="CPSC 449"
+              date="November 2021">
               <p className="body-text">
-                My personal portfolio showcasing my projects and experience.
+                  Backend School project aimed at building a REST API, social media system Using
+                  Python/Hug for routing, Redis for caching, DynamoDB and SQLite for data storage,
+                  and Haproxy for load balancing.
               </p>
           </ExperienceCard>
       </div>
       <div data-aos="zoom-in-right">
           <ExperienceCard className="experiencecard"
-              title="Study.us"
-              role="SDHacks 2021"
-              date="March 2021">
-              <p className="body-text">
-                  A Mern Stack project aimed at collecting student data such as test scores and homework
-                  to then caculate topics students struggle most with. The portal then recommends youtube 
-                  videos to the student based on the topics they struggle with.
-
-                  Wolfram Alpha Winner!
-              </p>
-          </ExperienceCard>
-      </div>
-      <div data-aos="zoom-in-right">
-          <ExperienceCard className="experiencecard"
+              imgLink={rotpot_logo}
               title="Rotten Potatoes"
               role="CPSC 349"
               date="November 2021">
               <p className="body-text">
-                  Fullstack project based on the popualr movie rating website Rotten Potatoes. 
+                  Fullstack project based on the popular movie rating website Rotten Tomatoes. 
                   Uses MERN stack and the MovieDB.
               </p>
+          </ExperienceCard>
+      </div>
+      <div data-aos="zoom-in-right">
+          <ExperienceCard className="experiencecard"
+            imgLink={studyus_logo}
+            title="Study.us"
+            role="SDHacks 2021"
+            date="March 2021">
+            <p className="body-text">
+                A Mern Stack project aimed at collecting student data such as test scores and homework
+                to then caculate topics students struggle most with. The portal then recommends youtube 
+                videos to the student based on the topics they struggle with.
+
+                Wolfram Alpha Winner!
+            </p>
           </ExperienceCard>
       </div>
     </div>
